@@ -1,17 +1,25 @@
 <div class="form-container">
-        
-        <p class="heading">TODO List</p>
+    <div class="basicInfo">
+        <h1 class="heading">TODO List</h1>
         <p>A place to store the things you have to do!</p>
-        
+    </div>    
+    
+    
+    <div class="inputCont">
         <input type="text" placeholder="Filter your to-dos" ng-model="$ctrl.todoFilter">
+    </div>
   
 <!--Putting the task-list component into this partial-->
-        <task-list todo-filter="$ctrl.todoFilter" todos="$ctrl.todos"></task-list>
+    <task-list todo-filter="$ctrl.todoFilter" todos="$ctrl.todos"></task-list>
         
-        <form ng-submit="$ctrl.addTask($ctrl.newTask)">
-        
-        <input type="text" placeholder="Add your to-do" ng-model="$ctrl.newTask">
-        <button button-hover ng-submit="$ctrl.addTask($ctrl.newTask)">Add</button>  
     
+    <form ng-submit="$ctrl.addTask($ctrl.newTask)">
+        
+        <div class="inputCont">
+            <input type="text" placeholder="Add your to-do" ng-model="$ctrl.newTask">
+        
+            <button button-hover ng-submit="$ctrl.addTask($ctrl.newTask)">Add</button>  
+        </div>    
     </form>  
+    
 </div>

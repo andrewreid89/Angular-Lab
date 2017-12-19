@@ -1,27 +1,19 @@
 (function() {
-    function testDirective() {
+    function hoverState() {
         return {
             restrict: "A",
-            template: `
-                <p>sample stuff here</p>
-        `,
-            replace: true
+            link: function($scope, $element, $attrs) {
+                $element.on("mouseenter", function() {
+                    $element.css("background-color", "darkgrey");
+                });
+                $element.on("mouseleave", function() {
+                    $element.css("background-color", "#EEE");
+                });
+            }
         };
-
+    }
+    
   angular
     .module("app")
-    .directive("testDirective", testDirective);
+    .directive("hoverState", hoverState);
 })();
-      
-      
-      
-//      link: function($scope, $element, $attrs) {
-//        $element.on("mouseenter", function() {
-//          $element.css("background-color", "darkgrey");
-//        });
-//        $element.on("mouseleave", function() {
-//          $element.css("background-color", "#EEE");
-//        });
-//      }
-//    
-//  }

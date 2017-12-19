@@ -1,3 +1,5 @@
 <ol>
-  <li hover-state ng-repeat="task in $ctrl.todos | filter: $ctrl.todoFilter track by $index"> {{ task }} <i delete-hover class="material-icons" ng-click="$ctrl.removeTask($index)">clear</i></li>
+  
+    <li hover-state ng-repeat="task in $ctrl.todos | filter: $ctrl.todoFilter track by $index"> {{ task }} <i delete-hover class="material-icons" ng-click="$ctrl.removeTask($index)">clear</i></li>
+
 </ol>
