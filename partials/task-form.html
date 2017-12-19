@@ -1,0 +1,17 @@
+<div class="form-container">
+        
+        <p class="heading">TODO List</p>
+        <p>A place to store the things you have to do!</p>
+        
+        <input type="text" placeholder="Filter your to-dos" ng-model="$ctrl.todoFilter">
+  
+<!--Putting the task-list component into this partial-->
+        <task-list todo-filter="$ctrl.todoFilter" todos="$ctrl.todos"></task-list>
+        
+        <form ng-submit="$ctrl.addTask($ctrl.newTask)">
+        
+        <input type="text" placeholder="Add your to-do" ng-model="$ctrl.newTask">
+        <button button-hover ng-submit="$ctrl.addTask($ctrl.newTask)">Add</button>  
+    
+    </form>  
+</div>

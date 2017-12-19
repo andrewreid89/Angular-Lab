@@ -1,0 +1,30 @@
+body {
+  background: linear-gradient(to right, #F857A6, #FF5858);
+  font-family: "Open Sans", sans-serif;
+}
+
+.form-container {
+  margin: 0 auto;
+  width: 40%;
+  background-color: #EEE;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+input {
+  text-align: center;
+}
+
+.form-container ol li {
+  font-size: 18px;
+}
+
+i {
+  z-index: 10;
+}
+
+button {
+  background-color: #FF69B4;
+  color: #EEE;
+  opacity: 0.5;
+}
+
